@@ -12,7 +12,6 @@ app.listen(3005, () => {
 
 app.post('/api/yt/download', (req, res) => {
     try {
-        console.log(req.body)
         if (ytdl.validateURL(req.body.url)) {
             if (req.body.type == 'mp3') {
                 res.header('Content-Disposition', 'attachment; filename="' + new Date() + '- Fizzy.mp3"');
