@@ -30,3 +30,7 @@ app.post('/api/yt/download', (req, res) => {
         res.json({ error: err, status: 500 });
     }
 })
+
+app.get('*', (req, res) => {
+  res.json({ error: 'Api error', status: 404 })
+})
